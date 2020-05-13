@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Landslide Map</title>
+    <link href="https://google-developers.appspot.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+
+    <!-- If you are in China, you may need to use theis site for the Google Maps code
+    <script src="https://maps.google.cn/maps/api/js" type="text/javascript"></script> -->
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="map.js"></script>
+        <script>
+
+      function initialize() {
+        alert("To see the title of a marker, hover over the marker, but don't click.");
+        var myLatlng = new google.maps.LatLng(50.378485,30.4789013)
+        var mapOptions = {
+          zoom: 6,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+        i = 0;
+        var markers = [];
+        for ( pos in myData ) {
+            i = i + 1;
+            var row = myData[pos];
+
+        //variable for the date input
+        var date = year[0];
+        document.getElementById('output').innerHTML = date
+
+        window.console && console.log(row);
+            // if ( i < 3 ) { alert(row); }
+            var newLatlng = new google.maps.LatLng(row[0], row[1]);
+            var marker = new google.maps.Marker({
+                position: newLatlng,
+                map: map,
+                title: row[2]
+            });
+            markers.push(marker);
+            <!-- New options for MarkerClusterer function to display markers -->
+            	    var options = {
+            			imagePath: 'http://rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m'
+            			}
+                    }
+            <!-- New var -->
+            	var markerCluster = new MarkerClusterer(map, markers, options);
+
+                  }
+              </script>
+              </head>
+              <body onload="initialize()">
+<div id="map_canvas" style="height: 500px"></div>
+
+<p><center><h1>Map description for <b id="output"></b> year<h1></center></p>
+<p>
+<b>This is a Global Landlslide Catalogue Export (GLC) visualization made with a help of Google Maps API and Dr. Chuck's (Charles Severance, <a href="https://twitter.com/drchuck">@drchuck</a>) educational materials from Python for Everybody specialization on Coursera.
+You could read more about GLC project here: <a href="https://data.nasa.gov/Earth-Science/Global-Landslide-Catalog-Export/dd9e-wu2v">www.data.nasa.gov</a>. </b> <br/><br/>
+
+<i> As a requirement for GLC DB usage I place as a cite these two sources :
+Kirschbaum, D. B., Adler, R., Hong, Y., Hill, S., & Lerner-Lam, A. (2010). A global landslide catalog for hazard applications: method, results, and limitations. Natural Hazards, 52(3), 561–575. doi:10.1007/s11069-009-9401-4. [1]
+Kirschbaum, D.B., T. Stanley, Y. Zhou (In press, 2015). Spatial and Temporal Analysis of a Global Landslide Catalog. Geomorphology. doi:10.1016/j.geomorph.2015.03.016. [2]
+</i>.
+</p>
+</body>
+</html>
