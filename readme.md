@@ -10,7 +10,7 @@ You could look at the dataset here: <a href="https://data.nasa.gov/Earth-Scienc
 <p>- <b><i>builder_offline.py</i></b> - does the same job, but with a downloaded <b><i>rows.json</i></b> data file.</p>
 <p>Also there is a <b><i>builder_light.py</i></b> that produces a little bit different DB with a smaller quantity of Landslides. Also the source has another JSON structure and another approach for its' parsing. Application produces db.sqlite, which is currently not used on the further stages of project.</p>
 2) <b>Data analysis and visualization</b>:
-<p>- with a help of the Google Maps (based on Dr. Chuck's files). <b><i>Geo.py</i></b> script writes a map.js file that is used by <a href="https://yarusx.github.io/GLC/map.html"><b><i>map.hmtl</i></b></a>. <b><i>Geo.py</i></b> has a filtering of Landslides events by the chosen year. Also it provides a small cleaning of the sqlite DB (removing nasty symbols that ruins JS file usage). <b><i>Map.html</i></b> file should be executed for visualization of Landslides on the Google Map.</p>
+<p>- with a help of the Google Maps (based on Dr. Chuck's files). <b><i>Geo.py</i></b> script writes a map.js file that is used by <a href="https://yarusx.github.io/GLC/map.html"><b><i>map.html</i></b></a>. <b><i>Geo.py</i></b> has a filtering of Landslides events by the chosen year. Also it provides a small cleaning of the sqlite DB (removing nasty symbols that ruins JS file usage). <b><i>Map.html</i></b> file should be executed for visualization of Landslides on the Google Map.</p>
 <p>- the second way of data analysis and visualization will be a Line Chart. It's still in progress. I plan to finish it until 15.05.2020.</p>
 
 <i>As a requirement for GLC DB usage I place as a cite these two sources</i>:
