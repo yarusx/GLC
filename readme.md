@@ -1,11 +1,11 @@
 <p>Hello everyone.</p>
-I was interested in a dataset called Global Landslide Catalog Export from NASA site. I like NASA as an organization: their goals and what they are doing. Also, they have a very well structured web page for datasets. This subject isn't relevant to me professionally, but I think it will be interesting to work on this project just for spreading my worldwide.
+I was interested in a dataset called <b>The Global Landslide Catalog Export</b> from <b>NASA</b> site. I like NASA as an organization - their goals and what they are doing. Also, they have a very well structured web page for datasets. This subject isn't relevant to me professionally, but I think it's a good chance for broaden my horizons.
 <p>
 You could look at the dataset here: <a href="https://data.nasa.gov/Earth-Science/Global-Landslide-Catalog-Export/dd9e-wu2v">NASA</a></p>
-<p>Here comes a short description of the GLC dataset: "<b>The Global Landslide Catalog (GLC)</b> was developed with the goal of identifying rainfall-triggered landslide events around the world, regardless of size, impacts or location. The GLC considers all types of mass movements triggered by rainfall, which have been reported in the media, disaster databases, scientific reports, or other sources. The GLC has been compiled since 2007 at NASA Goddard Space Flight Center. This is a unique data set with the ID tag “GLC” in the landslide editor."</p>
+<p>Here comes a <i>short description</i> of the GLC dataset: "<b>The Global Landslide Catalog (GLC)</b> was developed with the goal of identifying rainfall-triggered landslide events around the world, regardless of size, impacts or location. The GLC considers all types of mass movements triggered by rainfall, which have been reported in the media, disaster databases, scientific reports, or other sources. The GLC has been compiled since 2007 at NASA Goddard Space Flight Center. This is a unique data set with the ID tag “GLC” in the landslide editor."</p>
 <p><i>What kind of analysis could be done with this data?</i></p>
 <p>This project consists of such <b>steps (parts)</b>:</p>
-<p>1) <b>DB parsing<b> and getting info about the date and place of a Landslide. This could be done with a help of: <p>
+<p>1) <b>DB parsing</b> and getting info about the date and place of a Landslide. This could be done with a help of: <p>
 - <b><i>builder_big.py</i></b> - interacts directly with NASA web page and creates db_big.sqlite, or </p>
 <p>- <b><i>builder_offline.py</i></b> - does the same job, but with a downloaded <b><i>rows.json</i></b> data file.</p>
 <p>Also there is a <b><i>builder_light.py</i></b> that produces a little bit different DB with a smaller quantity of Landslides. Also the source has another JSON structure and another approach for its' parsing. Application produces db.sqlite, which is currently not used on the further stages of project.</p>
