@@ -11,7 +11,7 @@ You could look at the dataset here: <a href="https://data.nasa.gov/Earth-Scienc
 <p>Also there is a <b><i>builder_light.py</i></b> that produces a little bit different DB with a smaller quantity of Landslides. Also the source has another JSON structure and another approach for its' parsing. Application produces db.sqlite, which is currently not used on the further stages of project.</p>
 2) <b>Data analysis and visualization</b>:
 <p>- with a help of the Google Maps (based on Dr. Chuck's files). <b><i>Geo.py</i></b> script writes a map.js file that is used by <b><i>map.hmtl</i></b>. <b><i>Geo.py</i></b> has a filtering of Landslides events by the chosen year. Also it provides a small cleaning of the sqlite DB (removing nasty symbols that ruins JS file usage). <b><i>Map.html</i></b> file should be executed for visualization of Landslides on the Google Map.</p>
-<p>-second way of data analysis and visualization will be a Line Chart. It's still in progress. I plan to finish it until 15.05.2020.</p>
+<p>- the second way of data analysis and visualization will be a Line Chart. It's still in progress. I plan to finish it until 15.05.2020.</p>
 
 <i>As a requirement for GLC DB usage I place as a cite these two sources</i>:
 Kirschbaum, D. B., Adler, R., Hong, Y., Hill, S., & Lerner-Lam, A. (2010). A global landslide catalog for hazard applications: method, results, and limitations. Natural Hazards, 52(3), 561–575. doi:10.1007/s11069-009-9401-4. [1]
