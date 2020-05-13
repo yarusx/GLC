@@ -6,10 +6,10 @@ You could look at the dataset here: <a href="https://data.nasa.gov/Earth-Scienc
 <p><i>What kind of analysis could be done with this data?</i></p>
 <p>This project consists of such <b>steps (parts)</b>:</p>
 <p>1) <b>DB parsing</b> and getting info about the date and place of a Landslide. This could be done with a help of: <p>
-- <b><i>builder_big.py</i></b> - interacts directly with NASA web page and creates db_big.sqlite, or </p>
+- <b><i>builder_big.py</i></b> - interacts directly with NASA web page and creates <b><i>db_big.sqlite</i></b>, or </p>
 <p>- <b><i>builder_offline.py</i></b> - does the same job, but with a downloaded <b><i>rows.json</i></b> data file.</p>
 <p>Also there is a <b><i>builder_light.py</i></b> that produces a little bit different DB with a smaller quantity of Landslides. Also the source has another JSON structure and another approach for its' parsing. Application produces db.sqlite, which is currently not used on the further stages of project.</p>
-2) <b>Data analysis and visualization<b>:
+2) <b>Data analysis and visualization</b>:
 <p>- with a help of the Google Maps (based on Dr. Chuck's files). <b><i>Geo.py</i></b> script writes a map.js file that is used by <b><i>map.hmtl</i></b>. <b><i>Geo.py</i></b> has a filtering of Landslides evets by the chosen year. Also it provides a small cleaning of the sqlite DB (removing nasty symbols that ruins JS file usage). <b><i>Map.html</i></b> file should be executed for visualization of Landslides on the Google Map.</p>
 
 <i>As a requirement for GLC DB usage I place as a cite these two sources<i>:
