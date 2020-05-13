@@ -12,7 +12,7 @@ You could look at the dataset here: <a href="https://data.nasa.gov/Earth-Scienc
 2) <b>Data analysis and visualization</b>:
 <p>- with a help of the Google Maps (based on Dr. Chuck's files). <b><i>Geo.py</i></b> script writes a map.js file that is used by <b><i>map.hmtl</i></b>. <b><i>Geo.py</i></b> has a filtering of Landslides evets by the chosen year. Also it provides a small cleaning of the sqlite DB (removing nasty symbols that ruins JS file usage). <b><i>Map.html</i></b> file should be executed for visualization of Landslides on the Google Map.</p>
 
-<i>As a requirement for GLC DB usage I place as a cite these two sources<i>:
+<i>As a requirement for GLC DB usage I place as a cite these two sources</i>:
 Kirschbaum, D. B., Adler, R., Hong, Y., Hill, S., & Lerner-Lam, A. (2010). A global landslide catalog for hazard applications: method, results, and limitations. Natural Hazards, 52(3), 561–575. doi:10.1007/s11069-009-9401-4. [1]
 Kirschbaum, D.B., T. Stanley, Y. Zhou (In press, 2015). Spatial and Temporal Analysis of a Global Landslide Catalog. Geomorphology. doi:10.1016/j.geomorph.2015.03.016. [2]
 
