@@ -1,12 +1,18 @@
 <p>Hello everyone.</p>
 I was interested in a dataset called Global Landslide Catalog Export from NASA site. I like NASA as an organization: their goals and what they are doing. Also, they have a very well structured web page for datasets. This subject isn't relevant to me professionally, but I think it will be interesting to work on this project just for spreading my worldwide.
-The database could be downloaded from here: https://dev.socrata.com/foundry/data.nasa.gov/dd9e-wu2v
-You need to push "Export dataset as CSV ".
-Also, you could look at the dataset here: https://data.nasa.gov/Earth-Science/Global-Landslide-Catalog-Export/dd9e-wu2v
-Here is a short description of the GLC dataset: "The Global Landslide Catalog (GLC) was developed with the goal of identifying rainfall-triggered landslide events around the world, regardless of size, impacts or location. The GLC considers all types of mass movements triggered by rainfall, which have been reported in the media, disaster databases, scientific reports, or other sources. The GLC has been compiled since 2007 at NASA Goddard Space Flight Center. This is a unique data set with the ID tag “GLC” in the landslide editor."
-What kind of analysis could be done with this data?
-I thought that it would be great to parse the DB and get the info about the date and place of the disaster. Then compile that into SQlite DB. And after that visualize it through the Google API on the Google map (based on Dr. Chuck's application). The script that produces files for visualization should have a request for the year of disaster (it would be a way of filtering).
-As a requirement for GLC DB usage I place as a cite these two sources :
+<p>
+You could look at the dataset here: <a href="https://data.nasa.gov/Earth-Science/Global-Landslide-Catalog-Export/dd9e-wu2v">NASA</a></p>
+<p>Here comes a short description of the GLC dataset: "<b>The Global Landslide Catalog (GLC)</b> was developed with the goal of identifying rainfall-triggered landslide events around the world, regardless of size, impacts or location. The GLC considers all types of mass movements triggered by rainfall, which have been reported in the media, disaster databases, scientific reports, or other sources. The GLC has been compiled since 2007 at NASA Goddard Space Flight Center. This is a unique data set with the ID tag “GLC” in the landslide editor."</p>
+<p><i>What kind of analysis could be done with this data?</i></p>
+<p>This project consists of such <b>steps (parts)</b>:</p>
+<p>1) <b>DB parsing<b> and getting info about the date and place of a Landslide. This could be done with a help of: <p>
+- <b><i>builder_big.py</i></b> - interacts directly with NASA web page and creates db_big.sqlite, or </p>
+<p>- <b><i>builder_offline.py</i></b> - does the same job, but with a downloaded <b><i>rows.json</i></b> data file.</p>
+<p>Also there is a <b><i>builder_light.py</i></b> that produces a little bit different DB with a smaller quantity of Landslides. Also the source has another JSON structure and another approach for its' parsing. Application produces db.sqlite, which is currently not used on the further stages of project.</p>
+2) <b>Data analysis and visualization<b>:
+<p>- with a help of the Google Maps (based on Dr. Chuck's files). <b><i>Geo.py</i></b> script writes a map.js file that is used by <b><i>map.hmtl</i></b>. <b><i>Geo.py</i></b> has a filtering of Landslides evets by the chosen year. Also it provides a small cleaning of the sqlite DB (removing nasty symbols that ruins JS file usage). <b><i>Map.html</i></b> file should be executed for visualization of Landslides on the Google Map.</p>
+
+<i>As a requirement for GLC DB usage I place as a cite these two sources<i>:
 Kirschbaum, D. B., Adler, R., Hong, Y., Hill, S., & Lerner-Lam, A. (2010). A global landslide catalog for hazard applications: method, results, and limitations. Natural Hazards, 52(3), 561–575. doi:10.1007/s11069-009-9401-4. [1]
 Kirschbaum, D.B., T. Stanley, Y. Zhou (In press, 2015). Spatial and Temporal Analysis of a Global Landslide Catalog. Geomorphology. doi:10.1016/j.geomorph.2015.03.016. [2]
 
