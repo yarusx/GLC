@@ -9,7 +9,7 @@ while True :
     print("Please, enter a Year of landslides for the further visualization and press Enter")
     year = input()
 
-    cur.execute('SELECT Disasters.longitude, Disasters.latitude, Places.place_name  FROM Disasters JOIN Places ON Disasters.place_id = Places.id WHERE event_year = ?', (year, ) )
+    cur.execute('SELECT Disasters.longitude, Disasters.latitude, Places.place_name FROM Disasters JOIN Places ON Disasters.place_id = Places.id WHERE event_year = ?', (year, ) )
 
     try:
         cur.fetchone()[0]

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script type="text/javascript" src="lchart.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable( lchart );
+
+        var options = {
+          title: 'Top 10 countries with fatal cases caused by Landslides',
+          chartArea: {left:'10%',top:'10%', width: '65%', height: '65%'}
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 1300px; height: 600px;"></div>
+    This is a Global Landlslide Catalogue Export (GLC) visualization made with a help of Google Charts API and Dr. Chuck's (Charles Severance, <a href="https://twitter.com/drchuck">@drchuck</a>) educational materials from Python for Everybody specialization on Coursera.
+    You could read more about GLC project here: <a href="https://data.nasa.gov/Earth-Science/Global-Landslide-Catalog-Export/dd9e-wu2v">www.data.nasa.gov</a>. </b> <br/><br/>
+
+    <i> As a requirement for GLC DB usage I place as a cite these two sources :
+    Kirschbaum, D. B., Adler, R., Hong, Y., Hill, S., & Lerner-Lam, A. (2010). A global landslide catalog for hazard applications: method, results, and limitations. Natural Hazards, 52(3), 561–575. doi:10.1007/s11069-009-9401-4. [1]
+    Kirschbaum, D.B., T. Stanley, Y. Zhou (In press, 2015). Spatial and Temporal Analysis of a Global Landslide Catalog. Geomorphology. doi:10.1016/j.geomorph.2015.03.016. [2]
+  </body>
+</html>
